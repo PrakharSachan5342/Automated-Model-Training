@@ -9,5 +9,5 @@ iris = load_iris()
 X, y = iris.data, iris.target
 
 # Make predictions
-predictions = model.predict(X)
+predictions = model.predict(X) # Predictions on the same dataset
 print("Predictions:", predictions)
