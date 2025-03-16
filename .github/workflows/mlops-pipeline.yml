@@ -17,8 +17,23 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Debug - Print working directory
+        run: pwd
+
+      - name: Debug - List files
+        run: ls -l
+
       - name: Train model
         run: python train.py
+
+      - name: Debug - Verify model file exists
+        run: |
+          if [ -f "iris_model.pkl" ]; then
+            echo "Model file (iris_model.pkl) exists."
+          else
+            echo "Model file (iris_model.pkl) does not exist."
+            exit 1
+          fi
 
       - name: Upload model artifact
         uses: actions/upload-artifact@v3
