@@ -1,0 +1,1 @@
+[![MLOps Pipeline](https://github.com/PrakharSachan5342/Automated-Model-Training/actions/workflows/mlops-pipeline.yml/badge.svg?event=registry_package)](https://github.com/PrakharSachan5342/Automated-Model-Training/actions/workflows/mlops-pipeline.yml)
