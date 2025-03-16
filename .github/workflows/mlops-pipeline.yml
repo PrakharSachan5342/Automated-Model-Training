@@ -12,7 +12,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'  # Match your local Python version
+          python-version: '3.11'  # Use Python 3.11 to match your local version
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -33,10 +33,9 @@ jobs:
           else
             echo "Model file (iris_model.pkl) does not exist."
             exit 1
-          fi
 
       - name: Upload model artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3@65d7f2d534ac1bc67fcd62888c5f4f3d2cb2b236
         with:
           name: iris-model
           path: iris_model.pkl
